@@ -5,7 +5,238 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="description" content="Win 2 tickets to Katie Taylor v Flora Pili at Croke Park while supporting Ballintogher Defibrillator Working Group.">
   <title>Win 2 Tickets to Katie Taylor's Farewell Fight</title>
-  <link rel="stylesheet" href="styles.css">
+  <style>
+:root{
+  --green:#035b32;
+  --green-dark:#003d23;
+  --gold:#e3bd57;
+  --gold-light:#f1d27a;
+  --white:#fff;
+  --ink:#111;
+  --soft:#f6f6f3;
+  --line:#d8d8d2;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  color:var(--ink);
+  background:#fff;
+  line-height:1.5;
+}
+img{display:block;max-width:100%}
+.wrap{width:min(1040px,calc(100% - 28px));margin:0 auto}
+
+.site-header{
+  background:linear-gradient(90deg,var(--green-dark),#075c36);
+  color:#fff;
+}
+.header-inner{
+  width:min(1040px,calc(100% - 28px));
+  margin:0 auto;
+  display:flex;
+  align-items:center;
+  gap:22px;
+  padding:16px 0;
+}
+.header-inner img{
+  width:118px;
+  height:118px;
+  border-radius:50%;
+  background:#fff;
+  border:3px solid #fff;
+}
+.site-header h1{
+  margin:0;
+  text-transform:uppercase;
+  font-size:clamp(1.55rem,4vw,2.65rem);
+  line-height:1.03;
+  letter-spacing:.01em;
+}
+.gold-strip{
+  background:linear-gradient(90deg,#e9c35f,#f0d47b,#e9c35f);
+  color:#134125;
+  text-align:center;
+  font-weight:900;
+  text-transform:uppercase;
+  letter-spacing:.02em;
+  padding:11px 14px;
+  font-size:clamp(.74rem,1.7vw,.98rem);
+}
+.hero{
+  background:#050807;
+  overflow:hidden;
+}
+.hero img{
+  width:100%;
+  height:auto;
+  object-fit:contain;
+}
+
+.draw-panel{
+  margin-top:0;
+  background:linear-gradient(135deg,#064929,#00703e);
+  border:2px solid var(--gold);
+  border-radius:0 0 22px 22px;
+  color:#fff;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  overflow:hidden;
+}
+.draw-item{
+  text-align:center;
+  padding:24px 18px;
+  min-height:210px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+}
+.draw-item+ .draw-item{border-left:1px solid rgba(227,189,87,.8)}
+.draw-icon{font-size:2.2rem;color:var(--gold);line-height:1;margin-bottom:8px}
+.draw-item span{text-transform:uppercase;font-weight:800;font-size:.8rem;letter-spacing:.04em}
+.draw-item strong{
+  color:var(--gold);
+  font-size:2.25rem;
+  line-height:1;
+  margin:7px 0;
+  text-transform:uppercase;
+}
+.draw-item strong.word{font-size:1.55rem}
+.draw-item b{text-transform:uppercase;font-size:.85rem;line-height:1.4}
+
+.intro{
+  display:grid;
+  grid-template-columns:1.4fr .7fr;
+  gap:34px;
+  align-items:center;
+  padding:46px 0 34px;
+  font-size:1.05rem;
+}
+.intro strong{color:var(--green)}
+.cause-card{
+  text-align:center;
+  background:var(--soft);
+  border:1px solid var(--line);
+  border-radius:18px;
+  padding:18px;
+}
+.cause-card img{
+  width:170px;
+  margin:0 auto 12px;
+  border-radius:50%;
+}
+
+.entry-section{
+  margin:20px 0 34px;
+  border:1px solid #aaa;
+  border-radius:18px;
+  padding:0 20px 24px;
+}
+.entry-section h2{
+  width:max-content;
+  max-width:90%;
+  margin:-16px auto 18px;
+  padding:0 16px;
+  background:#fff;
+  color:var(--green);
+  text-transform:uppercase;
+  text-align:center;
+  font-size:1.25rem;
+}
+.entry-grid{
+  display:grid;
+  grid-template-columns:1fr 58px 1fr;
+  align-items:center;
+  gap:14px;
+}
+.entry-card{
+  background:linear-gradient(135deg,#075d34,#00703f);
+  border-radius:16px;
+  color:#fff;
+  text-align:center;
+  padding:22px;
+}
+.price{font-size:4.3rem;font-weight:950;line-height:.95}
+.entry-label{text-transform:uppercase;font-size:1.15rem;font-weight:900;letter-spacing:.05em;margin:7px 0 18px}
+.pay-button{
+  display:block;
+  background:linear-gradient(90deg,var(--gold),var(--gold-light));
+  color:#063c24;
+  text-decoration:none;
+  text-transform:uppercase;
+  font-weight:950;
+  border-radius:10px;
+  padding:13px 14px;
+  font-size:1.12rem;
+}
+.entry-card small{display:block;margin-top:10px}
+.or{
+  width:48px;height:48px;border:1.5px solid var(--green);
+  border-radius:50%;
+  display:grid;place-items:center;
+  font-weight:900;color:var(--green);
+  background:#fff;
+  margin:auto;
+}
+.winner-note{
+  background:var(--green);
+  color:#fff;
+  text-align:center;
+  padding:14px 18px;
+  border-radius:12px;
+  font-weight:900;
+  margin:0 auto 26px;
+}
+.info-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  border:1px solid var(--line);
+  border-radius:18px;
+  background:#fafafa;
+  margin-bottom:34px;
+}
+.info-block{padding:24px}
+.info-block+ .info-block{border-left:1px solid var(--line)}
+.info-block h3{text-transform:uppercase;margin:0 0 8px;color:var(--green-dark)}
+.info-block p{margin:8px 0}
+footer{
+  background:var(--green-dark);
+  color:#fff;
+  display:flex;
+  justify-content:center;
+  gap:38px;
+  flex-wrap:wrap;
+  padding:22px 16px;
+  text-transform:uppercase;
+}
+footer span{color:var(--gold);font-style:italic;text-transform:none;font-weight:800}
+
+@media(max-width:760px){
+  .header-inner{gap:12px}
+  .header-inner img{width:82px;height:82px}
+  .draw-panel{grid-template-columns:1fr;border-radius:0 0 16px 16px}
+  .draw-item{min-height:auto;padding:18px 12px}
+  .draw-item+ .draw-item{border-left:0;border-top:1px solid rgba(227,189,87,.65)}
+  .draw-item strong{font-size:2rem}
+  .intro{grid-template-columns:1fr;padding-top:30px}
+  .cause-card{order:-1}
+  .cause-card img{width:145px}
+  .entry-grid{grid-template-columns:1fr}
+  .or{margin:0 auto}
+  .info-grid{grid-template-columns:1fr}
+  .info-block+ .info-block{border-left:0;border-top:1px solid var(--line)}
+}
+@media(max-width:460px){
+  .wrap{width:min(100% - 18px,1040px)}
+  .site-header h1{font-size:1.36rem}
+  .gold-strip{font-size:.68rem}
+  .entry-section{padding-left:12px;padding-right:12px}
+  .price{font-size:3.8rem}
+}
+
+</style>
 </head>
 <body>
   <header class="site-header">
