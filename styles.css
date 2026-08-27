@@ -42,9 +42,8 @@ img { max-width: 100%; display: block; }
 }
 .hero-image {
   width: 100%;
-  height: clamp(300px, 53vw, 610px);
-  object-fit: cover;
-  object-position: center top;
+  height: auto;
+  object-fit: contain;
 }
 
 main { overflow: hidden; }
@@ -162,7 +161,7 @@ footer { background: #0b0e0d; color: #d8dfdb; text-align: center; padding: 24px 
 
 @media (max-width: 800px) {
   .deadline-bar { font-size: .76rem; padding: 10px 8px; }
-  .hero-image { height: 300px; }
+  .hero-image { height: auto; }
   .intro { grid-template-columns: 1fr; padding-top: 42px; gap: 28px; }
   .logo-card { order: -1; }
   .logo-card img { width: 190px; }
@@ -174,7 +173,7 @@ footer { background: #0b0e0d; color: #d8dfdb; text-align: center; padding: 24px 
 
 @media (max-width: 480px) {
   .wrap { width: min(100% - 22px, 1100px); }
-  .hero-image { height: 250px; }
+  .hero-image { height: auto; }
   h1 { font-size: 2.25rem; }
   .intro { padding-bottom: 34px; }
   .entry-section { padding-top: 24px; }
